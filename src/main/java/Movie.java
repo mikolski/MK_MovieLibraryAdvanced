@@ -1,4 +1,5 @@
 import java.util.List;
+import java.util.Locale;
 
 public class Movie {
     public Movie() {
@@ -36,5 +37,15 @@ public class Movie {
 
     public List<Actor> getActors() {
         return actors;
+    }
+
+    @Override
+    public String toString() {
+        return
+                "title: " + title + "\r\n" +
+                "director: " + director + "\r\n" +
+                "genre: " + genre.toLowerCase() + "\r\n" +
+                "year: " + year + "\r\n" +
+                "actors: " + actors.toString().substring(1, actors.toString().length()-1) ;
     }
 }
